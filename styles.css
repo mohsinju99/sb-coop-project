@@ -1,11 +1,51 @@
 .hidden {
+    visibility: hidden;
     display: none;
 }
 
+#fretboard-div {
+    display: flex;
+    flex-direction: column;
+}
+
 .string {
-    border: 5px dashed black;
+    /* border: 5px dashed black; */
+    display: flex;
+    position: relative;
+    height: 50px;
+    max-width: fit-content;
+}
+  
+.string-line {
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: black;
+    transform: translateY(-50%);
+    /* z-index: 0; */
 }
 
 .fret {
-    border: 3px solid goldenrod;
+    width: 50px;
+    height: 50px;
+    /* background-color: goldenrod; */
+    border-right: 2px inset goldenrod;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.note {
+    background-color: blue;
+    color: white;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 1;
 }
